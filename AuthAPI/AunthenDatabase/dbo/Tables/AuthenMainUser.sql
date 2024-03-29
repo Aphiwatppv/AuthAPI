@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[AuthenMainUser]
+(
+    UserID INT IDENTITY(1000000,1) PRIMARY KEY,
+    UserName NVARCHAR(255) UNIQUE NOT NULL,
+    PasswordHash NVARCHAR(256) NOT NULL, 
+    Salt NVARCHAR(256) NOT NULL, 
+    Email NVARCHAR(255) UNIQUE NOT NULL, 
+    IsActive BIT NOT NULL
+
+)
